@@ -1,7 +1,6 @@
 # WatchNext Developer Guide
 
 
-
 - [WatchNext Developer Guide](#watchnext-developer-guide)
   - [1. Introduction](#1-introduction)
     - [1.a Purpose](#1a-purpose)
@@ -13,16 +12,20 @@
     - [2.d Before Writing Code](#2d-before-writing-code)
   - [3. Design](#3-design)
   - [4. Implementation](#4-implementation)
-    - [Add](#add)
-    - [Edit](#edit)
+    - [Add Command](#add)
+    - [Edit Command](#edit)
+    + [Rating Command](#rating-command)
+    + [ChangeRating Command](#change-rating-command)
+    + [Delete Command](#delete-command)
+    + [DeleteRating Command](#deleterating-command)
+    + [UpdateTimeLimit Command](#updatetimelimit-command-feature)
+    + [Storage Implementation](#storage)
   - [5. Documentation](#5-documentation)
   - [6. Testing](#6-testing)
   - [7. Dev Ops](#7-dev-ops)
   - [Appendices](#appendices)
     - [Target user profile](#target-user-profile)
     - [Value proposition](#value-proposition)
-    + [Watch Command](#watch-command-feature)
-    + [UpdateTimeLimit Command](#updatetimelimit-command-feature)
   - [User Stories](#user-stories)
   - [Non-Functional Requirements](#non-functional-requirements)
   - [Glossary](#glossary)
@@ -117,23 +120,24 @@ The loadState function will read the file line by line. It will first call the l
 The rest contain of the file will be all shows details. A hash map called shows is create to collect shows information. Each show has a seven line recorded format so seven lines will be read in each loop to get a show information and then record the show into the shows class. when the function finish reading the last line, it will return shows.  
 
 
-
 ### Add
 
 The `add` command allows users to add a new show which they are watching to the `ShowList`. It is invoked by the inputParser. The addCommand class checks for the correct number of inputs and throws an exception when the number of arguments is mismatched.
+
 ### Edit 
 
 The `edit` command allows the user to change the details of each show that they are waatching after they have added the show. It is self-contained, including its own parser and methods which allows the user to change any parameter they wish, after the user enters `done`, `edit` replaces the old entry with the updated one.
 
 
- 4.a Rating Command
+### Rating Command
  
 The rating command was implemented in such a way where it takes in 2 parameters, the show to be rated and the desired rating for the show.
+
 Duke searches the list for the show that was inputted, if not found, a NullPointer exception will be thrown. Also, if the rating given is a negative number of exceeds 10, an IndexOutofBounds exception would be thrown. 
 
 After having retrieved the show in the list, the rating command sets the rating of the show and then proceeds to update it back into the show list.
 
-  4.b Change Rating Command
+### Change Rating Command
   
 
 The change rating command was implemented in a similar way to the Rating Command. The command takes in 2 parameters, the show which rating is to be changed and the new rating to be updated to. 
@@ -142,7 +146,7 @@ A Nullpointer exception is thrown when the show inputted is not in the show list
 
 After having retrieved the show from the show list, the change rating command proceeds to update the rating of the show before updating the show back into the show list.
 
-  4.c Delete Command
+### Delete Command
   
 The delete command takes in 1 parameter, the show to be deleted.
 
@@ -150,7 +154,7 @@ A Nullpointer exception is thrown when the show to be deleted cannot be found in
 
 If the show is found, the delete command proceeds to delete the show from the list.
 
-  4.d DeleteRating Command 
+### DeleteRating Command 
 
 The delete rating command takes in 1 parameter, the show which rating is to be deleted.
 
@@ -213,6 +217,15 @@ to the desired value, which is 120 in this case.
 
 * The change will then be reflected to the user, and be saved to the userData.txt file.
 
+### Storage  
+
+For the storage function, the file which named userData will be put in a specific file path with a fixed format.  
+
+The saveState function will save the watch time detail at the beginning and then follow by the show list. Everytime a command is executed by users, the file will be rewrite to update new contain. If the file or the folder does not exist in the specific path, the app will create it automatically.  
+
+The loadState function will read the file line by line. It will first call the loadWatchTimeDetail function to read the watch time detail, which is always the first three lines of the file, and then return a WatchTime instance.
+
+The rest contain of the file will be all shows details. A hash map called shows is create to collect shows information. Each show has a seven line recorded format so seven lines will be read in each loop to get a show information and then record the show into the shows class. when the function finish reading the last line, it will return shows.  
 
 
 ## 5. Documentation
