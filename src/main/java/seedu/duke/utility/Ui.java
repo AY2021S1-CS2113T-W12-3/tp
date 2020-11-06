@@ -2,6 +2,7 @@ package seedu.duke.utility;
 
 import seedu.duke.classes.Show;
 import seedu.duke.classes.WatchTime;
+import seedu.duke.commands.SearchCommand;
 import seedu.duke.utility.ErrorHandling.ExceptionResponse;
 
 import java.time.LocalDate;
@@ -385,6 +386,12 @@ public class Ui {
     public static void printInputLargerThanExpected() {
         System.out.println(ExceptionResponse.EXCEPTION_INPUT_LARGER_THAN_EXPECTED);
     }
+
+    public static void printExtraWhiteSpace() {
+        System.out.println(ExceptionResponse.EXCEPTION_EXTRA_WHITE_SPACE);
+    }
+
+
 
 }
 

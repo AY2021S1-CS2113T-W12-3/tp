@@ -1,6 +1,7 @@
 package seedu.duke.commands;
 
 import seedu.duke.classes.Show;
+import seedu.duke.utility.ErrorHandling;
 import seedu.duke.utility.ShowList;
 import seedu.duke.utility.Ui;
 
@@ -31,6 +32,12 @@ public class UpdateShowSeasonCommand extends Command {
     public void updateSeasonAndEpisode() {
         try {
             String showName = inputs.get(1);
+            for (int i = 1; i < 4;i++) {
+                if(inputs.get(i).equals("")) {
+                    throw new ErrorHandling(ErrorHandling.ExceptionResponse.EXCEPTION_EXTRA_WHITE_SPACE);
+                }
+            }
+
             int season = Integer.parseInt(inputs.get(2));
             int episode = Integer.parseInt(inputs.get(3));
             Show show = ShowList.getShow(showName);
@@ -47,6 +54,8 @@ public class UpdateShowSeasonCommand extends Command {
             Ui.printBadInputException();
         } catch (IndexOutOfBoundsException e) {
             Ui.printInputLargerThanExpected();
+        }catch (ErrorHandling e) {
+            Ui.printExtraWhiteSpace();
         }
     }
 
@@ -55,6 +64,11 @@ public class UpdateShowSeasonCommand extends Command {
      */
     public void updateSeasonOnly() {
         try {
+            for (int i = 1; i < 3;i++) {
+                if(inputs.get(i).equals("")) {
+                    throw new ErrorHandling(ErrorHandling.ExceptionResponse.EXCEPTION_EXTRA_WHITE_SPACE);
+                }
+            }
             String showName = inputs.get(1);
             int season = Integer.parseInt(inputs.get(2));
             Show show = ShowList.getShow(showName);
@@ -68,6 +82,8 @@ public class UpdateShowSeasonCommand extends Command {
             Ui.printBadInputException();
         } catch (IndexOutOfBoundsException e) {
             Ui.printInputLargerThanExpected();
+        } catch (ErrorHandling e) {
+            Ui.printExtraWhiteSpace();
         }
     }
 }
