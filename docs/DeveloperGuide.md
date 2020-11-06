@@ -1,41 +1,9 @@
 # WatchNext Developer Guide
 
+* Table of Contents
+{:toc}
 
-- [WatchNext Developer Guide](#watchnext-developer-guide)
-  - [1. Introduction](#1-introduction)
-    - [1.a Purpose](#1a-purpose)
-    - [1.b Scope](#1b-scope)
-  - [2. Setting up](#2-setting-up)
-    - [2.a Prerequisites](#2a-prerequisites)
-    - [2.b Setting up the project in your computer](#2b-setting-up-the-project-in-your-computer)
-    - [2.c Verifying the setup](#2c-verifying-the-setup)
-    - [2.d Before Writing Code](#2d-before-writing-code)
-  - [3. Design](#3-design)
-  - [4. Implementation](#4-implementation)
-    - [AddCommand](#addcommand)
-    - [EditCommand](#editcommand)
-    - [DeleteCommand](#deletecommand)
-    - [AddReview Command](#addreviewcommand)
-    - [ChangeRatingCommand](#changeratingcommand)
-    - [DeleteRatingCommand](#deleteratingcommand)
-    - [ChangeReviewCommand](#changereviewcommand)
-    - [DeleteReviewCommand](#deletereviewcommand)
-    - [WatchCommand](#watchcommand)
-    - [UpdateShowEpisodeProgressCommand](#updateshowepisodeprogresscommand)
-    - [UpdateShowSeasonCommand](#updateshowseasoncommand)
-    - [UpdateTimeLimitCommand](#updatetimelimitcommand)
-    - [Storage](#storage)
-    - [ErrorHandling](#errorhandling)
-  - [5. Documentation](#5-documentation)
-  - [6. Testing](#6-testing)
-  - [7. Dev Ops](#7-dev-ops)
-  - [Appendix A: Product Scope](#appendix-a-product-scope)
-  - [Appendix B: User Stories](#appendix-b-user-stories)
-  - [Appendix C: Non-Functional Requirements](#appendix-c-non-functional-requirements)
-  - [Appendix D: Glossary](#appendix-d-glossary)
-  - [Appendix E: Instructions for Manual Testing](#appendix-e-instructions-for-manual-testing)
 
-   
 ## 1. Introduction
 
 ### 1.a Purpose
@@ -865,10 +833,8 @@ Expected: An error message indicating that the input supplied was in a wrong for
 1. Test case: `list`<br>
 Expected: A list of the shows you have added will be displayed into the terminal. If no shows have been added, the list wil be empty.
 
-2. Test case: `List`<br>
+2. Test case: `list a`<br>
 Expected: An error message indicating that the input supplied was in a wrong format.
-
-> **[NOTE]** The command input is case-sensitive.
 
 #### Finding a show in your watch list
 

@@ -210,7 +210,6 @@ public class InputParser {
             showWatched.processCommand();
         } catch (NullPointerException e) {
             Ui.printNotFoundException();
-            return;
         }
     }
 
@@ -221,10 +220,8 @@ public class InputParser {
             searchCommand.processCommand();
         } catch (IndexOutOfBoundsException e) {
             Ui.printSpecifyShowName();
-            return;
         } catch (NullPointerException e) {
             Ui.printNotFoundException();
-            return;
         }
     }
 
@@ -236,10 +233,8 @@ public class InputParser {
             updateShowProgress.processCommand();
         } catch (NullPointerException e) {
             Ui.printBadInputException();
-            return;
         } catch (NumberFormatException e) {
             Ui.printInvalidFormatException();
-            return;
         }
 
 
@@ -412,6 +407,8 @@ public class InputParser {
             Ui.printDeleteReview(input);
         } catch (NullPointerException e) {
             Ui.printNotFoundException();
+        } catch (IndexOutOfBoundsException e) {
+            Ui.printNoReview();
         }
     }
 }

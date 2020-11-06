@@ -7,7 +7,9 @@ import seedu.duke.utility.Ui;
 
 import java.util.ArrayList;
 
-
+/**
+ * Represents a Command to update the watch progress of the user after watching a show.
+ */
 public class WatchCommand extends Command {
     ArrayList<String> inputs;
 
@@ -24,7 +26,6 @@ public class WatchCommand extends Command {
      * in which the current episode will be incremented by 1, and watch time will be updated.
      * The watchlist updates the show to a new season if required.
      */
-    //INPUT : watch <show name>
     public void processCommand() {
 
         String showName = inputs.get(1);

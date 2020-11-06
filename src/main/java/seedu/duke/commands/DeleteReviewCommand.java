@@ -11,13 +11,15 @@ public class DeleteReviewCommand extends Command {
         this.showName = showName;
     }
 
-    public void deleteReview(String showName) throws NullPointerException {
+    public void deleteReview(String showName) throws NullPointerException,IndexOutOfBoundsException {
         if (ShowList.getShowList().containsKey(showName)) {
             Show show = ShowList.getShow(showName);
-            show.setReview("null");
-            ShowList.setShow(showName,show);
-        } else {
-            throw new NullPointerException();
+            if (show.getReview().equals("null")) {
+                throw new IndexOutOfBoundsException();
+            } else {
+                show.setReview("null");
+                ShowList.setShow(showName,show);
+            }
         }
     }
 }
