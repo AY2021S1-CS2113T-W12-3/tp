@@ -38,7 +38,7 @@ The features can be found in [Section 4: “Features”](#4-features-br).
 Interested in using **WatchNext**? Jump to [Section 2: “Quick Start”](#2-quick-start) to get started now!
 <br><br>
 
-### 1.d. How to use this guide?
+### 1.d. How to use this guide? \[Shikai]
 Links like [this](#1c-what-will-this-guide-do) help you navigate to different parts of the document.
 
 Text that are in a `monospace font` represent either the user input or the program output.
@@ -180,7 +180,7 @@ The process is terminated. Your existing data is kept
  <div style="page-break-after: always;"></div>
 
  
-#### 4.c. `edit` - Edits your show details
+#### 4.c. `edit` - Edits your show details \[Shikai\]
  The `edit` command allows you to edit the name of the show, number of seasons, number of episodes, or the duration 
  of an episode depending on the input of the user when prompted.
   
@@ -252,14 +252,7 @@ The changes that you made before the error occured will still be kept.
 >  * The program will wait for your command to edit the show details until you input `done`.
 
  
- 
- To help you better understand the flow of this command we have included a program flow diagram to illustrate the process.
- 
- <img src = "images/programFlowUG.png" width = "500">
- 
- <sub><sup>The blue bubbles represent the Program portion of the interaction, while the yellow bubbles indicate the user input</sup></sub>
 
- &nbsp;
  
 ### 4.d. `list` - Displays all your shows in the list
 
