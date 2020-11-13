@@ -1,7 +1,32 @@
 # **WatchNext** User Guide
 
-* Table of Contents
-{:toc}
+- [**WatchNext** User Guide](#watchnext-user-guide)
+  - [1. Introduction](#1-introduction)
+    - [1.a. What is **WatchNext**?](#1a-what-is-watchnext)
+    - [1.b. Why use **WatchNext**?](#1b-why-use-watchnext)
+    - [1.c. What will this guide do?](#1c-what-will-this-guide-do)
+  - [2. Quick Start](#2-quick-start)
+  - [3. Command Format](#3-command-format)
+  - [4. Features](#4-features-br)
+      - [4.a. `help` and `example` - Provides a condensed help list](#4a-help-and-example---provides-a-condensed-help-list)
+      - [4.b. `add` - Adds a show](#4b-add---adds-a-show)
+      - [4.c. `edit` - Edits your show details](#4c-edit---edits-your-show-details)
+    - [4.d. `addreview` - Adding a review](#4d-addreview---adding-a-review)
+    - [4.e. `changereview` - Changing a review](#4d-addreview---adding-a-review)
+    - [4.f. `deletereview` - Deletes a review](#4f-deletereview---deletes-a-review)
+    - [4.g. `list` - Displays all your shows in the list](#4g-list---displays-all-your-shows-in-the-list)
+    - [4.h. `delete` - Deletes your show](#4h-delete---deletes-your-show)
+    - [4.i. `deleterating` - Deletes rating of your show](#4i-deleterating---deletes-rating-of-your-show)
+    - [4.j. `changerating` - Changes rating of your show](#4j-changerating---changes-rating-of-your-show)
+    - [4.k. `season` - Changes the season of the show you are currently watching](#4k-season---changes-the-season-of-the-show-you-are-currently-watching)
+    - [4.l. `episode` - Changes the episode of the show you are currently watching](#4l-episode---changes-the-episode-of-the-show-you-are-currently-watching)
+    - [4.m. Managing your watch time limit](#4m-managing-your-watch-time-limit)
+    - [4.m.a. `watch` - Watch a show in your watchlist](#4ma-watch---watch-a-show-in-your-watchlist)
+    - [4.m.b. `updatetimelimit` - update your watch time limit](#4mb-updatetimelimit---update-your-watch-time-limit)
+    - [4.n. `search` - search a show in the watchlist](#4n-search---search-a-show-in-the-watchlist)
+    - [4.o. `bye` - Exits the program](#4o-bye---exits-the-program)
+- [5. FAQ](#5-faq)
+- [6. Command Summary](#6-command-summary)
 
 <div style="page-break-after: always;"></div>
 

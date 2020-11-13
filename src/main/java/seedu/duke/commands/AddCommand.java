@@ -7,8 +7,6 @@ import seedu.duke.utility.Ui;
 
 import java.util.Scanner;
 
-//@@author shikai-zhou
-
 public class AddCommand extends Command {
     static String[] input;
 
@@ -28,17 +26,14 @@ public class AddCommand extends Command {
             throw new IndexOutOfBoundsException();
         }
         int numSeasons = Integer.parseInt(input[2]);
-        String[] tokenizedSeasonsEpisode = input[3].split(",");
+        String[] tokenizedSeasons = input[3].split(",");
         int[] seasonEpisodes = new int[numSeasons];
         int i = 0;
-        if (tokenizedSeasonsEpisode.length != numSeasons) {
+        if (tokenizedSeasons.length != numSeasons) {
             throw new NullPointerException();
         }
-        for (String s : tokenizedSeasonsEpisode) {
+        for (String s : tokenizedSeasons) {
             seasonEpisodes[i] = Integer.parseInt(s);
-            if (seasonEpisodes[i] <= 0) {
-                throw new RuntimeException();
-            }
             i++;
         }
         String name = input[1];
@@ -51,11 +46,8 @@ public class AddCommand extends Command {
         } else {
             duration = TimeParser.parseTime(input[4]);
         }
-        if (duration < 0) {
-            throw new RuntimeException();
-        }
         Show show = new Show(name, numSeasons, seasonEpisodes, duration);
-        boolean isGoingToBeAdded;
+        boolean isGoingToBeAdded = false;
         try {
             isGoingToBeAdded = checkExisting(name);
         } catch (NullPointerException e) {

@@ -17,19 +17,15 @@ public class UpdateShowEpisodeProgressCommand extends Command {
         }
     }
 
-
-
-    /**
-     * Updates the current episode field. Does not change the watchtime.
-     * INPUT : episode "show" "episode".
-     */
+    //INPUT : episode "show" "episode"
     public void processCommand() {
         String showName = inputs.get(1);
         int episode = Integer.parseInt(inputs.get(2));
         try {
             Show show = ShowList.getShow(showName);
             int currentSeason = show.getCurrentSeason();
-            if (episode > show.getEpisodesForSeason(currentSeason) || episode <= 0) {
+            int[] episodesForSeasons = show.getNumEpisodesForSeasons();
+            if (episode > episodesForSeasons[currentSeason]) {
                 throw new RuntimeException();
             }
             show.setEpisodeWatched(episode);
