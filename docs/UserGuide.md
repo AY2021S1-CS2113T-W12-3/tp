@@ -208,7 +208,6 @@ The process is terminated. Your existing data is kept
 #### 4.c. `edit` - Edits your show details \[Shikai\]
  The `edit` command allows you to edit the name of the show, number of seasons, number of episodes, or the duration 
  of an episode depending on the input of the user when prompted.
-  
  
 * Suppose you would like to edit details for your favorite show, Friends.
   Format:
@@ -220,8 +219,6 @@ The process is terminated. Your existing data is kept
     
      <img src = "images/edit_step_1.PNG" width = "600">
      
-
-
  * You will be prompted thereafter to enter the fields you want to change such as:
  name, season, episode, duration (of an episode).
  
