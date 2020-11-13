@@ -36,20 +36,21 @@
 
 #### **WatchNext** is a show tracker made for teenagers and young adults.
 <br><br> 
-### 1.a. What is **WatchNext**?
+### 1.a. What is **WatchNext**? [Jazhten]
 
 **WatchNext** is a show tracker designed for users who watch their favourite shows on multiple free streaming platforms and other open source streaming websites.
 **WatchNext** records your progress for the different shows you are currently watching, and even for upcoming shows that you plan to watch.
 <br>It additionally serves as a tracker to limit your daily watch time to help you better manage your time.
 <br>For students, **WatchNext** serves the same purpose of tracking your learning progress for lectures and webcasts.
-<br><br>This motivated our team to create an application that would not only help track all your shows and lectures, 
-but also foster a community where everyone will be able to share their watchlist with like-minded individuals and friends. <br>
 
-### 1.b. Why use **WatchNext**?
+### 1.b. Why use **WatchNext**? [Jazhten]
 It can be difficult and taxing to track your favourite shows through browser bookmarks.
 This is especially pertinent for younger teenagers and adults who make up a large part of video entertainment media consumers.
 
 For students like ourselves, there is also a need to manually track lecture videos and webcast progress as lecturers may use different learning management systems.
+
+<br>This motivated our team to create an application that would not only help track all your shows and lectures, 
+but also foster a community where everyone will be able to share their watchlist with like-minded individuals and friends. <br>
 
 **WatchNext** is optimized for users who prefer to work with the Command Line Interface (CLI).<br> 
 
@@ -106,7 +107,7 @@ If you are unfamiliar with the CLI (Command Line Interface), do give this helpfu
 
 ## 4. Features <br>
 
-#### 4.a. `help` and `example` - Provides a condensed help list
+#### 4.a. `help` and `example` - Provides a condensed help list (Benardo Tang)
 
  The `help` command provides a list which contains information about all the possible accepted commands.
  
@@ -145,7 +146,7 @@ Expected outcome:
 
 <div style="page-break-after: always;"></div>
 
-#### 4.b. `add` - Adds a show
+#### 4.b. `add` - Adds a show [Jazhten]
  The `add` command adds a show into your existing watchlist.
  
   Format:
@@ -158,21 +159,21 @@ Expected outcome:
   Explanation of input: <br>
   For the example input, `add Friends 3 10,20,30 25`, a show named `Friends` is being added.<br> The show has `3` seasons, where season 1 has `10` episodes, season 2 has `20` and season 3 has `30` episodes.
 >**[NOTE]**
->Note how the `10`,`20` and `30` are separated by commas without spaces in between.
+>Note that the `10`,`20` and `30` are separated by commas without spaces in between.
 >
 
   The duration of each episode is `25` minutes.<br>
  <img src = "images/addCommandUG/addInput.PNG" width = "600">
   &nbsp;<br>
   
- After keying in the input as shown in the image above, you should see th eexpected output shown in the next image.<br>
+ After keying in the input as shown in the image above, you should see th expected output shown in the next image.<br>
  
  <img src = "images/addCommandUG/addResponse.PNG" width = "600">
   &nbsp;<br>
   
  If you see the outcome as pictured above, it means that the show has been successfully added to **WatchNext**.
  
- If you already have an entry with the same name in your list, the program will prompt you as follows:
+ If you already have an entry with the same name in your list, the program will display the following prompt:
  
  `This action will overwrite your existing data. Continue? (y/n)`
  
@@ -301,8 +302,8 @@ The rating of your show will also be shown if you have added it using the [addre
 
 
  
-### 4.e. `addreview` - Adding a review
-
+### 4.e. `addreview` - Adding a review [Bryan Beh]
+ 
 The `addreview` command allows you to add a review for a show, including adding a rating.
 
  Format:
@@ -328,7 +329,7 @@ The `addreview` command allows you to add a review for a show, including adding 
    
    <div style="page-break-after: always;"></div>
    
-### 4.f. `changereview` - Changing a review
+### 4.f. `changereview` - Changing a review [Bryan Beh]
 
 The `changereview` command allows you to change a review for a show that is already in the show list.
 
@@ -352,7 +353,7 @@ The `changereview` command allows you to change a review for a show that is alre
   <img src = "images/changereviewlist.png" width = "700">
   
 
-### 4.g. `deletereview` - Deletes a review
+### 4.g. `deletereview` - Deletes a review [Bryan Beh]
 
 The `deletereview` command allows you to delete a review for a show that is already in the show list.
 
@@ -368,7 +369,7 @@ The `deletereview` command allows you to delete a review for a show that is alre
 
 <div style="page-break-after: always;"></div>
 
-### 4.h. `delete` - Deletes your show
+### 4.h. `delete` - Deletes your show [Chen Jiqing]
 
  The `delete` command removes a specified show from the watchlist.
  
@@ -393,7 +394,7 @@ The `deletereview` command allows you to delete a review for a show that is alre
 
  &nbsp;
  
-### 4.i. `deleterating` - Deletes rating of your show
+### 4.i. `deleterating` - Deletes rating of your show [Bryan Beh]
 
 The `deleterating` command deletes the rating for an existing show in the watchlist.
 
@@ -410,7 +411,7 @@ The `deleterating` command deletes the rating for an existing show in the watchl
 <br>
  <div style="page-break-after: always;"></div>
 
-### 4.j. `changerating` - Changes rating of your show
+### 4.j. `changerating` - Changes rating of your show [Bryan Beh]
 
 The `changerating` command changes the rating for an existing show which already has a rating in the watchlist.
 
@@ -435,7 +436,7 @@ The `changerating` command changes the rating for an existing show which already
  <img src = "images/changeratinglist.png" width = "700">
  
 
-### 4.k. `season` - Changes the season of the show you are currently watching
+### 4.k. `season` - Changes the season of the show you are currently watching [Chen Jiqing]
 
 The `season` command updates the current season of an existing show in your watchlist.
 
@@ -472,7 +473,7 @@ If you would like to change both the current season and current episode:
  Format:
   `season <SHOWNAME> <SEASON> <EPISODE>`
   
-### 4.l. `episode` - Changes the episode of the show you are currently watching
+### 4.l. `episode` - Changes the episode of the show you are currently watching [Chen Jiqing]
 
 The `episode` command updates the current episode of an existing show in your watchlist.
 
@@ -509,11 +510,11 @@ The `episode` command updates the current episode of an existing show in your wa
   
  &nbsp;
  
-### 4.m. Managing your watch time limit
+### 4.m. Managing your watch time limit 
 
  **WatchNext** allows you to set and track your daily watch time with its two commands , `watch` and `updatetimelimit`. 
  
-### 4.m.a. `watch` - Watch a show in your list
+### 4.m.a. `watch` - Watch a show in your list  (Benardo Tang)
 
 The `watch` command updates the watching progress for your show, and automatically updates your watch time limit.
 
@@ -551,7 +552,7 @@ The `watch` command updates the watching progress for your show, and automatical
  
 
  
-### 4.m.b. `updatetimelimit` - update your watch time limit
+### 4.m.b. `updatetimelimit` - update your watch time limit (Benardo Tang)
 
 The `updatetimelimit` command updates your daily watch time limit.
 
@@ -592,7 +593,7 @@ The underlined portion shows the prompt to the user, and the circled portion det
  > **[NOTE]**
  > * To allocate more time for yourself, simply use the `updatetimelimit` command again with a longer duration limit.
 
-### 4.n. `search` - search a show in the watchlist  
+### 4.n. `search` - search a show in the watchlist [Chen Jiqing]
 
 The `search` command helps you search for a specific show in the watchlist and prints out the show information.  
 
@@ -640,7 +641,7 @@ Expected outcome:
 
  <div style="page-break-after: always;"></div>
  
-## 5. FAQ 
+## 5. FAQ [Chen Jiqing]
 <br>
 
 **Q**: Is my watchlist saved after I exit the program?  
