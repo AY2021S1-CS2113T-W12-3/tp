@@ -207,6 +207,7 @@ The process is terminated. Your existing data is kept
 
  
 #### 4.c. `edit` - Edits your show details \[Shikai\]
+
  The `edit` command allows you to edit the name of the show, number of seasons, number of episodes, or the duration 
  of an episode depending on the input of the user when prompted.
  
@@ -231,21 +232,25 @@ Format:
 * Suppose you would like to update the name of the show
 
 Example of usage:
+
      `name F.r.i.e.n.d.s` 
      
 * A new season of F.r.i.e.n.d.s just started airing, and you would like to update your show details from 1 season to 2.
 
 Example of usage:
+
      `season 2`
      
 * Let's say that the first season has 10 episodes, and the new season of F.r.i.e.n.d.s has 11 episodes.
 
 Example of usage:
+
      `episode 10,11`
      
 * If the duration of each episode of F.r.i.e.n.d.s is extended to 30 minutes, use the following command:
 
 Example of usage:
+
      `duration 30`
      
 * When you have completed all changes, input `done`.
